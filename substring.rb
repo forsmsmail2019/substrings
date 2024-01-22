@@ -5,10 +5,17 @@ def checksubstring(word,dictionary)
     word.downcase!
   end
 
-  puts word
-  puts dictionary
   word.each do |c|
-    
+
 
   end
+
+
+  
+
 end
+
+
+dic = "amine,nassim,dahmoun".split(",")
+puts dic
+checksubstring("amiNe",dic)
