@@ -35,7 +35,7 @@ def checksubstring(word,dictionary)
 end
 
 
-dic = "amine,nassim,dahmoun,ami,ine".split(",")
+dic = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 print dic
 
-checksubstring("amiNe",dic)
+checksubstring("Below",dic)
