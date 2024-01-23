@@ -10,13 +10,15 @@ def checksubstring(word,dictionary)
 
   substrings={}
   for i in 0..word.length-1
-    for j in i+1..word.length
+    for j in i+1..word.length-i
       tmpword = word[i,j]
       #puts tmpword
       #puts "i : #{i}"
       #puts "j : #{j}"
       #check the generated word ifexiste in dicion
       if dictionary.include?(tmpword)
+        puts "i : #{i}"
+        puts "j : #{j}"
         puts "this :#{tmpword} found"
 
 
@@ -37,7 +39,7 @@ def checksubstring(word,dictionary)
 end
 
 
-dic = "amine,nassim,dahmoun".split(",")
+dic = "amine,nassim,dahmoun,ami,ine".split(",")
 print dic
 
 checksubstring("amiNe",dic)
