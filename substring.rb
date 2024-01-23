@@ -7,19 +7,20 @@ def checksubstring(word,dictionary)
   end
   #check words
   #try to extract words from the word
-  tmpword=word[0]
-  j= 0
-  for i in 0..word.length
-    for j in 1..word.length-1
-      tmpword += word[j]
-      puts tmpword
-      if i == word.length-1
-        i +=1
-        tmpword
-      end
-      #if dictionary.include?()
 
-      #end
+  substrings={}
+  for i in 0..word.length-1
+    for j in i+1..word.length
+      tmpword = word[i,j]
+      #puts tmpword
+      #puts "i : #{i}"
+      #puts "j : #{j}"
+      #check the generated word ifexiste in dicion
+      if dictionary.include?(tmpword)
+        puts "this :#{tmpword} found"
+
+
+      end
     end
   end
 
