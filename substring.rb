@@ -1,4 +1,4 @@
-def checksubstring(word,dictionary)
+def substring(word,dictionary)
   #make dictionry and the word in lowercase
   word.downcase!
   puts word
@@ -25,17 +25,19 @@ def checksubstring(word,dictionary)
         else
           substrings[tmpword]+=1
         end
-
         puts substrings
       end
     end
   end
-
-
 end
 
 
-dic = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-print dic
+def
 
-checksubstring("Below",dic)
+
+
+#dictionnary of words
+dic = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+#print dic
+#call the method checksubsting
+substring("Howdy partner, sit down! How's it going?",dic)
