@@ -1,3 +1,4 @@
+$substrings={}
 def substring(word,dictionary)
   #make dictionry and the word in lowercase
   word.downcase!
@@ -8,38 +9,48 @@ def substring(word,dictionary)
   #check words
   #try to extract words from the word
 
-  substrings={}
-  for i in 0..word.length-1
-    for j in i+1..word.length-i
-      tmpword = word[i,j]
+  i = 0
+  while i < word.length do
+
+      #tmpword = word[i]
       #puts tmpword
       #puts "i : #{i}"
       #puts "j : #{j}"
       #check the generated word ifexiste in dicion
-      if dictionary.include?(tmpword)
+      if dictionary.include?(word[i])
         #puts "i : #{i}"
         #puts "j : #{j}"
         #puts "this :#{tmpword} found"
-        unless substrings.include?(:tmpword)
-          substrings[tmpword]=1
+        unless $substrings.include?(:word)
+          $substrings[word[i]]=1
         else
-          substrings[tmpword]+=1
+          $substrings[word[i]]+=1
         end
-        puts substrings
+        #puts $substrings
       end
-    end
+      i+= 1
+
   end
 end
 
 #clear the entered text from special chars
+#convert the text to words in array
 def cleartxt(text)
   text.delete!(",?':;")
   #puts text
-end
-#
-def check(text)
   words = text.split(" ")
-  puts words
+  #puts words
+  return words
+end
+
+def check(text,dic)
+  words = cleartxt(text)
+  for word in words
+    substring(word,dic)
+  end
+
+  puts $substrings
+
 end
 
 
@@ -49,4 +60,4 @@ end
 dic = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 #print dic
 #call the method checksubsting
-substring("Howdy partner, sit down! How's it going?",dic)
+check("Howdy partner, sit down! How's it going?",dic)
