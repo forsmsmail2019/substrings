@@ -31,12 +31,15 @@ def substring(word,dictionary)
   end
 end
 
-
+#clear the entered text from special chars
 def cleartxt(text)
-  text..delete!(",?':;")
-  puts text
-
-
+  text.delete!(",?':;")
+  #puts text
+end
+#
+def check(text)
+  words = text.split(" ")
+  puts words
 end
 
 
