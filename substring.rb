@@ -20,20 +20,16 @@ def checksubstring(word,dictionary)
         #puts "i : #{i}"
         #puts "j : #{j}"
         #puts "this :#{tmpword} found"
-        substrings[tmpword]=1
+        unless substrings.include?(:tmpword)
+          substrings[tmpword]=1
+        else
+          substrings[tmpword]+=1
+        end
+
         puts substrings
       end
     end
   end
-
-
-
-
-
-
-
-
-
 
 
 end
