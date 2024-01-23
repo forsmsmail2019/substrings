@@ -17,11 +17,11 @@ def checksubstring(word,dictionary)
       #puts "j : #{j}"
       #check the generated word ifexiste in dicion
       if dictionary.include?(tmpword)
-        puts "i : #{i}"
-        puts "j : #{j}"
-        puts "this :#{tmpword} found"
-
-
+        #puts "i : #{i}"
+        #puts "j : #{j}"
+        #puts "this :#{tmpword} found"
+        substrings[tmpword]=1
+        puts substrings
       end
     end
   end
