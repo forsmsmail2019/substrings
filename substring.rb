@@ -32,7 +32,13 @@ def substring(word,dictionary)
 end
 
 
-def
+def cleartxt(text)
+  text..delete!(",?':;")
+  puts text
+
+
+end
+
 
 
 
