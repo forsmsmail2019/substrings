@@ -1,10 +1,9 @@
 def substring(word,dictionary)
   #make dictionry and the word in lowercase
   #convert the given word or text to array
-  word = word.split(" ")
-  word.each { |value| value.downcase! }
-  puts word
-  
+  word = word.downcase!.split(" ")
+  #puts word
+
   dictionary.each do |word|
     word.downcase!
   end
@@ -16,7 +15,7 @@ def substring(word,dictionary)
     i = 0
     while i < dictionary.length do
       if (value.include?(dictionary[i]))
-        puts "this: #{dictionary[i]} found"
+        #puts "this: #{dictionary[i]} found"
         substrings[dictionary[i]] += 1
       end
       i+= 1
@@ -29,5 +28,5 @@ end
 #dictionnary of words
 dic = ["below","down","go","o","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 #print dic
-#call the method checksubsting
+#call the method substing
 substring("Howdy partner, sit down! How's it going?",dic)
